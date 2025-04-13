@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Price Compare Extension",
+    "version": "1.0",
+    "description": "Compare prices on Google Shopping.",
+    "permissions": ["scripting", "tabs", "activeTab"],
+    "host_permissions": [
+      "https://www.amazon.in/*",
+      "https://www.amazon.com/*",
+      "https://www.flipkart.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.amazon.in/*",
+          "https://www.flipkart.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
